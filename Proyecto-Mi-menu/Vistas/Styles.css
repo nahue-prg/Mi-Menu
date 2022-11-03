@@ -1,0 +1,872 @@
+﻿
+/*------------------------CONFIG Y VARS------------------------*/
+:root {
+    --gray-100: #2e2c36; /*Gris oscuro*/
+    --gray-80: #6a696e;
+    --gray-40: #b3b9c2;
+    --gray-20: #e6ebf1;
+    --gray-10: #f7f8f9;
+    --primary-100: #ff441f; /*naranja RAPPI*/
+    --primary-20: #ffe9e9; /*naranja transparente*/
+    --primary-120: #e93e1c;
+    --primary-150: #c72a0b; /*narajan bastante mas oscuro*/
+    --secondary-1-100: #ff7d00; /*Naranja amarilloso*/
+    --secondary-1-20: #fff2e5;
+    --secondary-2-100: #5e00be; /*VIOLETA*/
+    --secondary-2-20: #dddffa;
+    --secondary-3-100: #29d884; /*VERDE*/
+    --secondary-3-HOVER: #22a767; /*VERDE HOVER*/
+    --secondary-3-20: #e9fcf2;
+    --secondary-4-100: #007aff; /*CELESTE*/
+    --secondary-4-20: #e9f4ff;
+    --tertiary-100: #ffae00; /*Amarillo anaranjqado*/
+    --facebook-100: #3b5998; /*Azul facebook*/
+    --google-100: #176bef; /*Azul mas claro*/
+
+    --fuente1: 'Nunito', sans-serif; /*Nudito*/
+    --fuente2: 'Lobster', cursive;
+}
+
+* {
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    list-style: none;
+    font-family: var(--fuente1);
+    font-weight: 600;
+}
+
+/*-------------------ETIQUETAS GLOBALES---------------*/
+
+footer{
+    width:100%;
+    height:80px;
+    background:#eee;
+    margin-top:40px;
+}
+
+body {
+    font-size: 16px;
+    background-color: rgb(247, 248, 249);
+}
+
+a {
+    text-decoration: none;
+    color:inherit;
+}
+
+a:hover{
+    text-decoration-style:solid;
+    text-decoration:underline;
+    text-decoration-thickness:1px;
+    cursor:pointer;
+}
+
+ul{
+    padding:0;
+}
+
+h2{
+    font-size:1.3rem;
+}
+
+/*---------DROP DOWN LIST-----------*/
+.DDL{
+    padding:5px 10px;
+    border: 1px solid var(--primary-100);
+    border-radius:10px;
+    font-weight:bolder;
+}
+
+/*---------------BOTONES-------------*/
+.buton{
+    background-color:var(--secondary-3-100);
+    border:none;
+    border-radius:7px;
+    padding: 10px 17px;
+    color:#fff;
+}
+
+.buton:hover{
+    background-color:var(--secondary-3-HOVER);
+    cursor:pointer;
+}
+
+/*------------FECHITAS------------------*/
+.fechita{
+    border:none;
+    background-color:#ddd;
+    border-radius:5px;
+    padding:5px;
+}
+
+.fechita:hover{
+    cursor:pointer;
+}
+
+/*------------------------HEADER-----------------------*/
+
+.menu-header {
+    box-shadow: rgb(230 235 241) 0px 1px 0px 0px;
+    padding: 12px 20px;
+    background-color:#fff;
+}
+
+    .menu-header ul {
+        font-size:1.1rem;
+        display: flex;
+        justify-content:space-between;
+    }
+        .menu-header ul li {
+            padding: 7px 15px;
+        }
+
+
+
+.LogoPrincipal {
+    font-family: var(--fuente2);
+    color: var(--primary-100);
+    
+    }
+
+.liLogo{
+   
+}
+
+.carrito {
+    background: var(--secondary-3-100);
+    border-radius: 10px;
+    color: #fff;
+}
+
+/*-----------------------TITULO--------------------------*/
+
+.titulo{
+    width:100%;
+    margin:auto;
+    background-color:var(--primary-100);
+    color:#fff;
+    text-align:center;
+    padding:30px;
+    box-shadow: #bbb 1px 1px 1px 1px;
+}
+
+/*-------------VOLVER----------------------*/
+
+.volver{
+   
+    margin-top:30px;
+    margin-bottom:30px;
+    text-align:center;
+}
+
+.volver *{
+    margin: auto;
+   
+}
+
+
+
+/*----------Seleccion pocas opciones con iconos (MIRAR pagina admin.aspx - ejemplo)-------------*/
+
+.seleccion {
+    margin-top:50px;
+    display: flex;
+    justify-content: space-around;
+    align-content:center;
+    align-items:center;
+}
+
+    .seleccion div {
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        background: white;
+        width: 150px;
+        height: 150px;
+        border-radius: 15px;
+        border: 2px solid var(--primary-100);
+        text-align: center;
+    }
+    .seleccion div i{
+
+        margin-bottom:20px;
+        font-size:30px;
+        
+    }
+
+    .seleccion div:hover{
+        background: var(--primary-100);
+        color:white;
+        cursor:pointer;
+        
+        
+    }
+
+/*-------------------------ADMIN----------------------*/
+
+/*Configuracion ambos*/
+.reports-date {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom:50px;
+    margin-top:50px;
+}
+
+/*-Seccion reportes 2*/
+.reports {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+}
+
+.reports_div {
+   
+   
+    border-radius: 15px;
+    width:700px;
+    height: 100px;
+    background-color: var(--google-100);
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+    
+}
+
+.reports_div:first-child {
+    margin-bottom:30px;
+}
+
+    .reports_div:nth-child(2) {
+        margin-bottom: 30px;
+    }
+
+.reports_div:hover {
+    background:var(--facebook-100);
+}
+
+/*-Seccion reportes 1*/
+
+.date{
+    border:2px solid var(--primary-100) ;
+    border-radius:15px;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+    text-align:center;
+    color:var(--primary-100);
+    
+}
+
+.date:hover{
+    background:var(--primary-100);
+    color:#fff;
+    cursor:pointer;
+}
+
+.date_option{
+    width:100%;
+display:flex;
+justify-content:space-around;
+align-items:center;
+}
+
+/*---------------Seccion Reportes 2//ACTIVAR ELIMINAR---------*/
+
+.Activar-eliminar{
+    margin:auto;
+    width:500px;
+    height:300px;
+    margin-top:30px;
+    background-color:white;
+    border:2px solid var(--primary-100);
+    border-radius:15px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+}
+
+.mostrar {
+    margin-right:30px;
+    margin-left:30px;
+    
+    height: 50px;
+    border: 1px solid var(--primary-100);
+    font-size: 1.1rem;
+    font-weight: bolder;
+    border-radius: 15px;
+}
+
+
+.Activar-eliminar_option{
+    text-align:center;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+
+/*----------------GRIDVIEWS ADMIN---------------*/
+.gridView {
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    margin-bottom:50px;
+    background:#fff;
+}
+
+.gridView tr{
+    border: 1.5px solid #555;
+}
+
+    .gridView tr *{
+        padding:10px;
+    }
+
+
+
+    .gridView td{
+        padding: 10px;
+        text-align: center;
+        border: 1.5px solid #555;
+    }
+    .gridView td *{
+        display: block;
+        margin:5px auto;
+        text-align: center;
+    }
+
+.gridView tr{
+   
+}
+
+
+/*--------------------FILTRAR---------------------*/
+
+.filtrar {
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+    width:max-content;
+    
+}
+.filtrar *{
+    margin-left:10px;
+}
+
+/*---------------------INICIAR SESION------------------*/
+.IniciarSesion {
+    padding:25px;
+    width:max-content;
+    height:max-content;
+    margin:auto;
+    margin-top:30px;
+    display:flex;
+    flex-direction:column;
+    background-color:white;
+    border-radius:15px;
+    border:1px solid var(--primary-100);
+
+}
+
+.IniciarSesion-campo{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    text-align:center;
+    margin-bottom:15px;
+}
+
+
+.IniciarSesion-campo-boton {
+    margin: auto;
+    margin-top:10px;
+}
+
+.sugerencia{
+    margin:auto;
+    text-align:center;
+    margin-top:20px;
+}
+
+.link{
+    color:Var(--primary-100);
+}
+
+.sesionSugerencia{
+    font-size: 0.8rem;
+}
+
+
+/*--------FORMULARIO LLENAR CAMPOS-----------*/
+
+.formulario {
+    padding: 15px 25px;
+    width: max-content;
+    height: max-content;
+    margin:auto;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid var(--primary-100);
+}
+
+.formulario:last-child{
+    margin-bottom:50px;
+}
+
+.formulario-Titulo{
+    margin:auto;
+    color:var(--primary-100);
+    font-weight:bolder;
+    margin-bottom:10px;
+}
+
+.formulario-campo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.formulario-campo label{
+    text-align:start;
+    margin-bottom:2px;
+    font-size: 0.7rem;
+    font-weight:bolder;
+}
+
+.formulario-campo-boton {
+    margin: auto;
+}
+
+.formulario-aclaracion{
+    text-align:center;
+    margin-bottom:5px;
+    font-size:0.9rem;
+    text-decoration:underline;
+}
+
+.aviso{
+    margin-top:20px;
+    text-align:center;
+    margin-bottom:20px;
+    color:#f00;
+    
+}
+
+.formularios-horizontal{
+    width:1000px;
+    margin:auto;
+    display:flex;
+    justify-content:space-around;
+}
+
+/*----------------INDEX-----------------*/
+#LinkButton1 {
+    display: block;
+    border-radius: 35px;
+    background: var(--secondary-3-100);
+    padding: 15px;
+    margin: auto;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+    #LinkButton1:hover {
+        cursor: pointer;
+        background-color: var(--secondary-3-HOVER);
+        text-decoration: none;
+    }
+
+.busqueda-index {
+    width: 850px;
+    margin: auto;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 35px;
+    background: var(--primary-100);
+    color: white;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%), 0 -1px 2px 0 rgb(0 0 0 / 10%);
+}
+
+    .busqueda-index div:first-child{
+        border-right:2px dashed #fff;
+        padding: 5px 0;
+    }
+
+    .busqueda-index div select {
+        width: 170px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+        .busqueda-index div select option {
+            color: #000;
+            cursor: pointer;
+        }
+
+        
+
+    .busqueda-index div {
+        margin: auto;
+        width: 200px;
+        text-align: center;
+    }
+
+
+
+    .busqueda-index div *{
+        border:none;
+        background:none;
+        color:white;
+    }
+
+#LinkButton1 {
+    display: block;
+    border-radius: 35px;
+    background: var(--secondary-3-100);
+    padding: 15px;
+    margin: auto;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%), 0 -1px 2px 0 rgb(0 0 0 / 10%);
+}
+
+.busqueda-index div *::placeholder {
+    color: #fff;
+}
+
+
+/*--------- LISTVIEW INDEX-------------*/
+
+
+.Provincia{
+margin-top:15px;
+text-align:center;
+color: var(--primary-100);
+}
+
+
+#ListView1_groupPlaceholderContainer{
+   /*display: none;*/
+}
+
+.listView {
+    margin: auto;
+    width: max-content;
+}
+
+#ListView1_groupPlaceholderContainer tbody {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 900px;
+    min-width: 900px;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.Negocio-Listview_ItemTemplate_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 260px;
+    height: 320px;
+    padding: 10px;
+    text-align: center;
+    background: #FFF;
+    border-radius: 25PX;
+    margin-bottom: 25PX;
+    /* border: 1px solid var(--primary-100);*/
+    font-size: 0.9rem;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%), 0 -1px 2px 0 rgb(0 0 0 / 10%);
+}
+
+    .Negocio-Listview_ItemTemplate_div:hover {
+        box-shadow: 0 1px 1px 0 VAR(--primary-100), 0 -1px 2px 0 VAR(--primary-100);
+    }
+
+    .Negocio-Listview_imagen {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 25px;
+        margin: auto;
+    }
+
+    .dataPager{
+        margin:auto;
+        text-align:center;
+    }
+
+.Negocio-Listview_imagen:hover {
+    outline:1px solid var(--primary-100);
+    border:1px solid var(--primary-100);
+    cursor:pointer;
+}
+
+.Negocio-Listview_Nombre{
+    font-weight:bolder;
+}
+
+.Negocio-Listview_Provincia {
+    font-size:0.8rem;
+}
+
+.Negocio-Listview_Localidad{
+    font-size:0.7rem;
+}
+
+/*---------LISTVIEW MENU-----------*/
+
+/*Section que engloba lisview*/
+.Menu-Listview{       
+    max-width:1000px;
+    margin:auto;
+}
+
+.categoria-Completa{     /*Contiene todos los productos de una categoria*/
+width:100%;
+margin:auto;
+margin-top:30px;
+background:#fff;
+border-radius:25px;
+}
+
+.categoria {
+    padding:25px 20px;
+    border-bottom:0.5px solid #aaa;
+}
+
+    .categoria * {
+        font-weight: bolder;
+        font-size:1.1rem;
+    }
+
+.ListviewInterno-Productos{   /*Contiene todos los productos de la categoria sin incluir a la categoria*/
+margin:auto;
+display:flex;
+justify-content:space-around;
+flex-wrap:wrap;
+max-width:100%
+}
+
+.listView-Menu_div { /*Contiene a todo el producto ( con imagen incluida )*/
+    margin-top: 15px;
+    font-size: 0.8rem;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    margin: 30px 0 30px 0;
+    padding:20px;
+    border:1px solid #aaa;
+    border-radius:25px;
+}
+
+.listView-Menu_div_img {
+    text-align: center;
+   margin-right: 20px;
+}
+
+.lisview-menu-img { /*Contiene a la imagen*/
+    width: 75px;
+    height: 75px;
+    border-radius: 25px;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+    
+}
+
+.listView-Menu_div_items{   /*Contiene nombre, descripcion y precio*/
+display:flex;
+flex-direction:column;
+justify-content:space-around;
+margin-right:20px;
+width:200px;
+
+}
+
+.listView-Menu_div_items_nombre *{     /*NOMBRE DE PRODUCTO*/
+    
+}
+
+.listView-Menu_div_items_descripcion * { /*DESCRIPCION DEL PRODUCTO*/
+font-weight:lighter;
+}
+
+.listView-Menu_div_items_precio * { /*PRECIO DEL PRODUCTO*/
+font-weight:bolder;
+}
+
+.buton-productos {
+    padding:0;
+    width:30px;
+    text-align:center;
+    height:30px;
+    border-radius:100%;
+    margin:auto;
+    font-weight:bolder;
+}
+
+.div_realizarPedido{
+   text-align:center;
+   margin-top:40px;
+}
+
+.carrito-gridView{
+margin:auto;
+margin-top:20px;
+
+}
+
+    .carrito-gridView tbody {
+        border-radius: 25px;
+    }
+
+    .carrito-gridView * {
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
+.listView-Menu_div_items_botones{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.menos{
+    
+    background:#f00;
+
+}
+
+.menos:hover {
+    background: #f66;
+}
+
+
+/*-----Carrito total-----*/
+
+.carrito_total{
+    margin:auto;
+    text-align:center;
+    margin-top:30px;
+    padding:10px;
+    width:max-content;
+}
+
+.btnList{
+    margin:auto;
+    display:flex;
+    justify-content:space-around;
+    width:200px;
+}
+
+.Aviso-error{
+    width:100%;
+    margin:auto;
+    margin-top:30px;
+    text-align:center;
+
+}
+
+.vaciar-Carrito{
+
+    background:none;
+    color:black;
+    border:1px solid red;
+}
+
+    .vaciar-Carrito:hover{
+        background:red;
+        color:white;
+    }
+
+.botones-carrito{
+margin:auto;
+margin-top:20px;
+
+}
+
+/*-----MI CUENTA-----------*/
+.mi-cuenta {
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 350PX;
+    height: 200PX;
+    text-align: center;
+}
+
+.GridPedidos{
+    margin:auto;
+    margin-top:30px;
+    text-align:center;
+}
+
+.GridPedidos *{
+    margin: auto;
+    
+    text-align: center;
+}
+
+/*------PEDIDOS-----*/
+
+.Pedidos-Negocios{
+
+   width:max-content;
+    margin:auto;
+   
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+}
+
+.Pedidos-Negocios div{
+    margin:auto;
+    margin-top:20px;
+   text-align:center;
+}
+
+.Idpedido{
+}
+
+/*--------USUARIO STICKY-------*/
+
+.usuario-sticky {
+    display:flex;
+    padding:5px 15px;
+    background: var(--primary-100);
+    color: white;
+    position: absolute;
+    opacity:0.5;
+    bottom:15px;
+    left: 10px;
+    border-radius:25px;
+}
+
+.usuario-sticky *{
+
+    margin:auto;
+}
